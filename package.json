@@ -1,6 +1,6 @@
 {
   "name": "react-native-viewpager-indicator",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "ScrollableTabView.js",
   "scripts": {

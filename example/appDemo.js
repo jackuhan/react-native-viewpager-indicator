@@ -14,7 +14,7 @@ const appDemo = React.createClass({
   render() {
     let body;
 
-    body = <ScrollableTabView
+    body1 = <ScrollableTabView
                 tabBarUnderlineColor="#ee394b"
                 tabBarActiveTextColor="#ee394b"
                 tabBarInactiveTextColor = {'#333333'}
@@ -29,15 +29,51 @@ const appDemo = React.createClass({
             >
               {classifies.map(function (item, i) {
                 return (
-                    <Page classify={item.id} tabLabel={item.title}/>
+                    <Page classify={item.id} tabLabel={item.title} key={i+1}/>
                 );
               })}
             </ScrollableTabView>
 
+    body2 = <ScrollableTabView
+        tabBarUnderlineColor="#ee394b"
+        tabBarActiveTextColor="#ee394b"
+        tabBarInactiveTextColor = {'#333333'}
+        tabBarTextStyle = {{paddingBottom:0,fontSize:13,marginTop:0}}
+        tabBarUnderlineStyle = {{backgroundColor: '#ee394b', height: 1,}}
+        renderTabBar={() => <ScrollableTabBar
+                                 tabsContainerStyle={styles.tabbarContainer}
+                                 tabStyle={styles.tab}
+                                 tabPadding={tabPadding}
+                                 underlineAlignText={false}
+                                 />}
+    >
+      {classifies.map(function (item, i) {
+        return (
+            <Page classify={item.id} tabLabel={item.title} key={i+1}/>
+        );
+      })}
+    </ScrollableTabView>
+
+    body3 = <ScrollableTabView
+        tabBarUnderlineColor="#ee394b"
+        tabBarActiveTextColor="#ee394b"
+        tabBarInactiveTextColor = {'#333333'}
+        tabBarTextStyle = {{paddingBottom:0,fontSize:13,marginTop:0}}
+        tabBarUnderlineStyle = {{backgroundColor: '#ee394b', height: 1,}}
+    >
+      {classifies.map(function (item, i) {
+        return (
+            <Page classify={item.id} tabLabel={item.title} key={i+1}/>
+        );
+      })}
+    </ScrollableTabView>
+
 
     return (
         <View style={styles.page}>
-          {body}
+          {body1}
+          {body2}
+          {body3}
         </View>
 
 
@@ -51,11 +87,11 @@ var styles = StyleSheet.create({
   page: {
     flex: 1,
     paddingTop:20,//statusBar
-    backgroundColor: '#f0f0f0'
+    backgroundColor: '#f0f0f0',
+    flexDirection:'column',
   },
   //整个页面居中
   loadingWrapper: {
-    flex: 1,
     justifyContent: 'center',//左右居中
     alignItems: 'center',
     backgroundColor: '#f0f0f0'
@@ -89,7 +125,7 @@ var classifies = [
   },
   {
     id: 24,
-    title: "今日新品",
+    title: "今日数码新品",
   },
   {
     id: 13,
@@ -101,26 +137,18 @@ var classifies = [
   },
   {
     id: 12,
-    title: "西洋好货",
+    title: "好货",
   },
   {
     id: 34,
-    title: "京东直供",
+    title: "京东",
   },
   {
     id: 35,
-    title: "热剧周边",
+    title: "热剧",
   },
   {
     id: 14,
-    title: "追剧美食",
+    title: "追剧",
   },
-  {
-    id: 26,
-    title: "潮妆时尚",
-  },
-  {
-    id: -1,
-    title: "明日秒杀",
-  }
 ];

@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.2",
-    "react-native-viewpager-indicator": "0.0.1"
+    "react-native-viewpager-indicator": "0.0.3"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",

@@ -15,7 +15,6 @@ const Button = require('./Button');
 //import { PropTypes } from 'react'
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
-var tabPad = 0;
 
 const ScrollableTabBar = React.createClass({
   propTypes: {
@@ -60,7 +59,6 @@ const ScrollableTabBar = React.createClass({
   },
 
   componentDidMount() {
-    tabPad = this.props.underlineAlignText?this.props.tabPadding:0;
     this.props.scrollValue.addListener(this.updateView);
   },
 
@@ -115,6 +113,7 @@ const ScrollableTabBar = React.createClass({
   },
 
   updateTabUnderline(position, pageOffset, tabCount) {
+    const tabPad = this.props.underlineAlignText?this.props.tabPadding:0;
     const lineLeft = this._tabsMeasurements[position].left;
     const lineRight = this._tabsMeasurements[position].right;
 
