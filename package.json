@@ -1,0 +1,40 @@
+{
+  "name": "react-native-viewpager-indicator",
+  "version": "0.0.1",
+  "description": "",
+  "main": "ScrollableTabView.js",
+  "scripts": {
+    "lint": "eslint -c .eslintrc . --ignore-path .gitignore",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackuhan/react-native-viewpager-indicator.git"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native",
+    "tab",
+    "viewpager",
+    "viewpager-indicator",
+    "indicator",
+    "scrollable"
+  ],
+  "author": "HanJiahu<jackuhan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jackuhan/react-native-viewpager-indicator/issues"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.20.0"
+  },
+  "homepage": "https://github.com/jackuhan/react-native-viewpager-indicator#readme",
+  "dependencies": {
+    "react-timer-mixin": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.1.1"
+  }
+}
