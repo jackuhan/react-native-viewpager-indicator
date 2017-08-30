@@ -248,6 +248,6 @@ const styles = StyleSheet.create({
   },
   tabs: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    // justifyContent: 'space-around', android设备可能撞车
   },
 });
