@@ -7,6 +7,7 @@ import {
     View,
 } from 'react-native';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-viewpager-indicator';
+import ScrollableViewPager, { ScrollableIndicator, } from 'react-native-viewpager-indicator';
 import Page from './Page';
 
 const appDemo = React.createClass({
